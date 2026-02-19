@@ -12,21 +12,21 @@ export const goUp = new CustomEvent<actionEvent>("goUp",{
     cancelable: true,
 },);
 
-export const godown = new CustomEvent<actionEvent>("goDown",{
+export const goDown = new CustomEvent<actionEvent>("goDown",{
     detail: {
         action: "down"
     },
     bubbles: true,
     cancelable: true,
 },);
-export const goleft = new CustomEvent<actionEvent>("goLeft",{
+export const goLeft = new CustomEvent<actionEvent>("goLeft",{
     detail: {
         action: "left"
     },
     bubbles: true,
     cancelable: true,
 },);
-export const goright = new CustomEvent<actionEvent>("goright",{
+export const goRight = new CustomEvent<actionEvent>("goright",{
     detail: {
         action: "right"
     },
