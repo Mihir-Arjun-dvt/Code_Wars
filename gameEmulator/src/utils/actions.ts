@@ -10,26 +10,26 @@ export const goUp = new CustomEvent<actionEvent>("goUp",{
     },
     bubbles: true,
     cancelable: true,
-},)
+},);
 
-export const godown = new CustomEvent<actionEvent>("goUp",{
+export const godown = new CustomEvent<actionEvent>("goDown",{
     detail: {
-        action: "up"
+        action: "down"
     },
     bubbles: true,
     cancelable: true,
-},)
-export const goleft = new CustomEvent<actionEvent>("goUp",{
+},);
+export const goleft = new CustomEvent<actionEvent>("goLeft",{
     detail: {
-        action: "up"
+        action: "left"
     },
     bubbles: true,
     cancelable: true,
-},)
-export const goright = new CustomEvent<actionEvent>("goUp",{
+},);
+export const goright = new CustomEvent<actionEvent>("goright",{
     detail: {
-        action: "up"
+        action: "right"
     },
     bubbles: true,
     cancelable: true,
-},)
+},);
