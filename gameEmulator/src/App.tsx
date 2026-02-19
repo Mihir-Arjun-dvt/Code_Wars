@@ -1,4 +1,5 @@
 import './index.css'
+import { goRight, goUp,goDown,goLeft } from './utils/actions';
 
 function App() {
   const cells = Array.from({ length: 144 }, (_, i) => i + 1);
@@ -19,17 +20,17 @@ function App() {
       </div>
 
       {/* Buttons */}
-      <div className="flex gap-4">
+      <div className="flex gap-4" onClick={(e) => e.target.dispatchEvent(goUp)}>
         <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors font-medium">
           Up
         </button>
-        <button className="px-6 py-2 bg-slate-700 text-slate-200 rounded-lg hover:bg-slate-600 transition-colors font-medium border border-slate-600">
+        <button onClick={(e) => e.target.dispatchEvent(goDown)} className="px-6 py-2 bg-slate-700 text-slate-200 rounded-lg hover:bg-slate-600 transition-colors font-medium border border-slate-600">
           Down
         </button>
-        <button className="px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors font-medium">
+        <button onClick={(e) => e.target.dispatchEvent(goRight)} className="px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors font-medium">
           Right
         </button>
-        <button className="px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors font-medium">
+        <button onClick={(e) => e.target.dispatchEvent(goLeft)}className="px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors font-medium">
           Left
         </button>
         <button className="px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors font-medium">
