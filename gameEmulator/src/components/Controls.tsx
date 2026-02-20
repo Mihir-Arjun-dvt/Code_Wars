@@ -1,4 +1,5 @@
 import { HiArrowDown, HiArrowUp, HiArrowRight, HiArrowLeft  } from "react-icons/hi";
+import { AiOutlineWarning } from "react-icons/ai";
 
 type Direction = 'up' | 'down' | 'left' | 'right';
 
@@ -31,7 +32,7 @@ export function Controls({ onMove, onDanger }: ControlsProps) {
       </div>
 
       <button onClick={onDanger} className="px-6 py-4 bg-red-700 text-white rounded-lg hover:bg-red-600 transition-colors font-medium">
-        Danger
+        <AiOutlineWarning size={30}/>
       </button>
     </div>
   );
