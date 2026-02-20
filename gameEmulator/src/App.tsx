@@ -21,7 +21,11 @@ function App() {
   };
 
   const handleDanger = () => {
-    console.log('Danger clicked!');
+    const JumpTimes = 3;
+    for (let index=0 ;index < JumpTimes; index++) {
+     const randomCol =Math.floor(Math.random() * 12)
+     const randomRow =Math.floor(Math.random() * 12)
+    setPosition({row: randomRow, col: randomCol})   }
   };
 
   return (
