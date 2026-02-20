@@ -5,19 +5,13 @@ export async function handleDanger(
     jumpTimes: number,
     totalDurationMs: number
 ): Promise<void> {
-
-    const sumOfSteps = (jumpTimes * (jumpTimes - 1)) / 2;
-
-    const timeUnit = totalDurationMs / sumOfSteps;
+    const delayPerJump = totalDurationMs / jumpTimes;
 
     for (let index = 0; index < jumpTimes; index++) {
+        await new Promise((r) => setTimeout(r, delayPerJump * 2));
+
         const randomCol = Math.floor(Math.random() * 12);
         const randomRow = Math.floor(Math.random() * 12);
-        
         setPosition({ row: randomRow, col: randomCol });
-
-        const currentDelay = index * timeUnit;
-
-        await new Promise((r) => setTimeout(r, currentDelay));
     }
 }
