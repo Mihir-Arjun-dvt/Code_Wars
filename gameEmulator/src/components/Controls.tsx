@@ -1,7 +1,4 @@
-import { HiArrowDown } from "react-icons/hi";
-import { HiArrowUp } from "react-icons/hi";
-import { HiArrowRight } from "react-icons/hi";
-import { HiArrowLeft } from "react-icons/hi";
+import { HiArrowDown, HiArrowUp, HiArrowRight, HiArrowLeft  } from "react-icons/hi";
 
 type Direction = 'up' | 'down' | 'left' | 'right';
 
